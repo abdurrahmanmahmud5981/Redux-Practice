@@ -10,6 +10,6 @@ export const store = configureStore({
         video: videoSlice,
         tags: tagsSlice,
         relatedVideos: relatedVideosSlice,
-        filter: filterSlice
+        filter: filterSlice,
     }
 })

@@ -5,9 +5,5 @@ export const getVideo = async (id)=>{
     return response.data;
 }
 
-// increment dislike
-export const dislikeVideo = async (id)=>{
-    const response = await axios.post(`/videos/${id}/dislike`);
-    return response.data;
-}
+
 

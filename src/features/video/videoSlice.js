@@ -12,6 +12,14 @@ const videSlice = createSlice({
         loading: false,
         error: null,
     },
+    reducers: {
+        like(state){
+            state.video.likes += 1;
+        },
+        dislike(state){ 
+            state.video.dislikes += 1;
+        },
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchVideo.pending, (state, action) => {
@@ -29,4 +37,5 @@ const videSlice = createSlice({
     }
 })
 
+export const { like, dislike } = videSlice.actions;
 export default videSlice.reducer;
